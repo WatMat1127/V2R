@@ -1,3 +1,4 @@
+This is the latest version of the VL program (at April 9, 2025). For the original version, please see [VLAO/VL](https://github.com/WatMat1127/VLAO/tree/main/VL).
 
 # How to Run
 
@@ -46,11 +47,11 @@ Each ligand section can include two or more `ovoid_LJpot` statements.
 
 ## Step 2. Run GRRM 
 
-Run the corresponding GRRMjob. For instructions on how to run GRRM jobs, see [AFIR-web](https://afir.sci.hokudai.ac.jp). The GRRM23 program calls the `VL_main.py` at each iteration of geometry optimization. If the above settings are done properly, you will find _GRRM_job_\_LinkJOB.rrm_old and _GRRM_job_\_LinkJOB.rrm_final in addition to usual output files of the GRRM23 program. When the ovoid-based LJ potential is used, _GRRM_job_.phi_log and _GRRM_job_\_ovoid.xyz will be also generated.
+Run the corresponding GRRMjob. For instructions on how to run GRRM jobs, see [AFIR-web](https://afir.sci.hokudai.ac.jp). The GRRM23 program calls the `VL_main.py` at each iteration of geometry optimization. If the above settings are done properly, you will find _GRRM_job_\_LinkJOB.rrm_old and _GRRM_job_\_LinkJOB.rrm_final in addition to usual output files of the GRRM23 program. When the ovoid-based LJ potential is used, _GRRM_job_\_MO.rrm\_ex and _GRRM_job_\_MO\_ovoid.xyz will be also generated.
 
 - _GRRM_job_\_LinkJOB.rrm_old and _GRRM_job_\_LinkJOB.rrm_final include the geometry and the corresponding electronic energy, gradient, and Hessian before and after adding penalty functions, respectively.
-- _GRRM_job_.phi_log includes the optimized internal parameters ($\mathbf{q}^*_{\mathrm{VL}}$).
-- _GRRM_job_\_ovoid.xyz shows each apex of the ovoid by placing dummy atoms (X). In the original VLAO paper, the ovoid was visualized based on this file using Matplotlib.
+- _GRRM_job_\_MO.rrm\_ex includes the optimized internal parameters ($\mathbf{q}^*_{\mathrm{VL}}$).
+- _GRRM_job_\_MO\_ovoid.xyz shows each apex of the ovoid by placing dummy atoms (X). In the original paper, the ovoid was visualized based on this file using Matplotlib.
 
-
+## Step 3. Compute gradient and Hessian 
 
