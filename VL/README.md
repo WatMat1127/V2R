@@ -3,9 +3,10 @@ This is the latest version of the VL program (at April 9, 2025). For the origina
 # How to Run
 
 ## Step 1. Prepare input files
-The following files are required. You can find example files in the `Example` directory.  
+The following files are required. You can find example input files in the `example` directory.  
 - _GRRM_job_.com
 - _GRRM_job_.param
+- _GRRM_job_.param_tag
 
 ### GRRM_job.com
 An input file for the GRRM23 program. See [AFIR-web](https://afir.sci.hokudai.ac.jp) for the detailed format.
@@ -45,6 +46,10 @@ Each ligand section can include one or more `keeppot` and `keepanglepot` stateme
 Each ligand section can include two or more `ovoid_LJpot` statements.
 - The `ovoid_LJpot` statement specifies the parameters of the ovoid-based LJ potential. The first integer defines the Cl* atom for which the ovoid-based LJ potential is calculted; $\varepsilon$ is the parameter corresponding to the well depth; $a_1, a_2, b_1, b_2, c_1, c_2$ and $d$ are the parameters which define shape and size of the ovoid.
 
+### GRRM_job.param_tag
+An input file for the `VL_main.py` which specifies parameters to calculate gradients and Hessians.  
+The format is essentially same as that for _GRRM_job_.param. The parameters for differentiation should be spesicied as `@@p@@`.  
+
 ## Step 2. Run GRRM 
 
 Run the corresponding GRRMjob. For instructions on how to run GRRM jobs, see [AFIR-web](https://afir.sci.hokudai.ac.jp). The GRRM23 program calls the `VL_main.py` at each iteration of geometry optimization. If the above settings are done properly, you will find _GRRM_job_\_LinkJOB.rrm_old and _GRRM_job_\_LinkJOB.rrm_final in addition to usual output files of the GRRM23 program. When the ovoid-based LJ potential is used, _GRRM_job_\_MO.rrm\_ex and _GRRM_job_\_MO\_ovoid.xyz will be also generated.
@@ -55,3 +60,5 @@ Run the corresponding GRRMjob. For instructions on how to run GRRM jobs, see [AF
 
 ## Step 3. Compute gradient and Hessian 
 
+Run the following command to compute the gradient and Hessian of the electronic energy with respect to the VL parameters specified in the _GRRM_job_.param_tag.  
+`python VL_main.py GRRM_job_LinkJOB.rrm GRRM_job GRRM_job param_hess`
