@@ -1,3 +1,5 @@
+This is the latest version of the optimizer for the VLAO calculation (at April 9, 2025). For the original version, please see [VLAO/optimizer](https://github.com/WatMat1127/VLAO/tree/main/optimizer).
+
 # How to Run
 ## Step 0. Set GRRMsub command
 Set up your computer enviroment so that a GRRM job can be executed with the following command: `GRRMsub filename`.  
@@ -31,7 +33,7 @@ The following files are required. You can find elample files in the `Example` di
 An input file for `main.py` which specifies GRRM jobs to be executed, the absolute path for `VL_main.py`, parameters to be optimized, and other detailed settings for optimization in the following format:
 
   ----------
-  \# GRRMjobs to be executed  
+  \# GRRMjobs to be executed    
   com_1: _GRRM_job_1_, (float)   
   com_2: _GRRM_job_2_, (float)   
   •••
@@ -55,8 +57,8 @@ The `com_n` statement specifies GRRMjob to be executed (format: com\__n_: _filen
 The `SubAddExPot` statement specifies the absolute path for `VL_main.py`.    
 The `param_tag` statement specifies the parameters to be optimized. The label should be consistent with those written in _GRRM_job_i_.param.      
 The `init_param` statement specifies the initial values for each paramter.    
-The `param_range` statement specifies the lower and higher bounds for each paramter (see Figure S6 in the VLAO paper).  
-The `penalty_std` statement specifies the scale of the barrier function (see Figure S6 in the VLAO paper).  
+The `param_range` statement specifies the lower and higher bounds for each paramter (see the function B(p) in the original paper).  
+The `penalty_std` statement specifies the scale of the barrier function (see the function B(p) in the original paper).  
 The `max_itr` statement specifies the maximum number of iteration for the conjugate gradient method.   
 The `grad_threshold` and `param_threshold` statements specify termination criteria. The calculation will be terminated when the maximum absolute values among the gradient components and the displacement components are smaller than those specified here.  
 The `f_val_threshold` statement specifies another termination criterion. The calculation will be terminated when the objective function is smaller than those specified here.  
