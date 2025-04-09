@@ -61,4 +61,5 @@ Run the corresponding GRRMjob. For instructions on how to run GRRM jobs, see [AF
 ## Step 3. Compute gradient and Hessian 
 
 Run the following command to compute the gradient and Hessian of the electronic energy with respect to the VL parameters specified in the _GRRM_job_.param_tag.  
-`python VL_main.py GRRM_job_LinkJOB.rrm GRRM_job GRRM_job param_hess`
+`python VL_main.py GRRM_job_LinkJOB.rrm GRRM_job GRRM_job param_hess`  
+The results will be saved in _GRRM_job_\.param\_grad and _GRRM_job_.param\_hess, respectively.
