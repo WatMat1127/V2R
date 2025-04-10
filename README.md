@@ -8,10 +8,10 @@ If codes and/or data in this repository are used in your work, please cite the f
 > _ACS Catal._ **2024**, _14_, 16297.  
 > _ChemRxiv_ **2025**, DOI: 10.26434/chemrxiv-2025-0snj5. 
 
-It consists of two main components:
+It consists of three main components:
 - VL : python programs to calculate the penarty, gradient and Hessian for the virtual ligand method
-- optimizer : python programs to perform the VLAO calculation by the conjugate gradient method
-- data: representative input files and resulting data sets
+- optimizer : python programs to perform the VLAO calculation
+- data: representative input files and data sets
   
 Each component has a readme file with further information.  
 The codes might have been slightly modified from the version used in the original paper, but it has been confirmed that essentially the same results are obtained.   
