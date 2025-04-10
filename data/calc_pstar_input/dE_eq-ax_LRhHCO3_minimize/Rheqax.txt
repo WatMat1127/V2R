@@ -1,0 +1,18 @@
+# GRRMjobs to be executed
+com_1: RhHCO3-ax, 0.0
+com_2: RhHCO3-eq, 0.0
+
+# the absolute path for VL_main.py
+SubAddExPot=/xxx/yyy/VL_main.py
+
+# parameter setting
+param_tag  : r0, a1, b1
+init_param : 1.6, 3.0, 2.0
+param_range: 1.3_1.9, 2.0_3.5, 1.5_3.0
+penalty_std: 3.0
+
+# detailed setting
+max_itr         : 150
+grad_threshold  : 1.0
+param_threshold : 0.1
+f_val_threshold : -50

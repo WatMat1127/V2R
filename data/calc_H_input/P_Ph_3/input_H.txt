@@ -1,0 +1,34 @@
+# GRRMjobs to be executed
+com_1: Free_______virt, 0.0
+com_2: AgCl_______virt, 607.0813563
+com_3: AuCl_______virt, 595.8449056
+com_4: BH3________virt, 26.57742083
+com_5: CrCO5______virt, 1610.410826
+com_6: CuCl_______virt, 2100.406651
+com_7: H__________virt, 0.0
+com_8: IrClCO2-c__virt, 790.9480907
+com_9: IrClCO2-t__virt, 790.9480907
+com_10: NiCO3______virt, 1847.818669
+com_11: NiPH33_____virt, 2537.28404
+com_12: PdCl3______virt, 1508.248534
+com_13: PdPH33_____virt, 1157.09433
+com_14: PtCl3______virt, 1499.721831
+com_15: PtPH33_____virt, 1148.580234
+com_16: RhClCO2-c__virt, 797.1067599
+com_17: RhClCO2-t__virt, 797.1067599
+
+# the absolute path for VL_main.py
+SubAddExPot=/xxx/yyy/VL_main.py
+
+# parameter setting
+param_tag  : r0, a1, b1
+init_param : 1.6, 3.0, 2.0
+param_range: 1.3_1.9, 2.0_3.5, 1.5_3.0
+penalty_std: 0.0
+
+# detailed setting
+max_itr         : 150
+grad_threshold  : 0.5
+param_threshold : 0.1
+f_val_threshold : 0
+

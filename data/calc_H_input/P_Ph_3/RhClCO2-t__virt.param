@@ -1,0 +1,15 @@
+num_virtual_mol   =1
+LIGLIGLIGLIGLIGLIGLIGLIGLIGLIG
+atom_num_center   =7
+atom_num_sub      =8,9,10
+off_target_atom   =1
+keeppot           =8; 2.0; @@r0@@
+keeppot           =9; 2.0; @@r0@@
+keeppot           =10; 2.0; @@r0@@
+keepanglepot      =8; 8.0; 65.0
+keepanglepot      =9; 8.0; 65.0
+keepanglepot      =10; 8.0; 65.0
+ovoid_LJpot       =8; 0.400; @@a1@@; @@a1@@; @@b1@@; @@b1@@; 3.0; 3.0; 3.0
+ovoid_LJpot       =9; 0.400; @@a1@@; @@a1@@; @@b1@@; @@b1@@; 3.0; 3.0; 3.0
+ovoid_LJpot       =10; 0.400; @@a1@@; @@a1@@; @@b1@@; @@b1@@; 3.0; 3.0; 3.0
+LIGLIGLIGLIGLIGLIGLIGLIGLIGLIG
