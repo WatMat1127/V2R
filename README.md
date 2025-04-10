@@ -1,6 +1,6 @@
 # V2R
 
-This repository contains codes and data to reproduce the results in the following paper:   
+This repository contains codes and data for the following paper:   
 > Linking Virtual and Real Worlds: Mathematical Framework to Identify Optimal Molecule based on Virtual Ligand Strategy.  
 > DOI: ([10.26434/chemrxiv-2025-0snj5](https://chemrxiv.org/engage/chemrxiv/article-details/67d8c3fa6dde43c90830259a))  
 
