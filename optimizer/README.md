@@ -8,19 +8,19 @@ An example csh script for GRRMsub is shown below:
 ```sh
 #!/bin/csh
 
-set fn_run=$argv[1]
-set GRRM=xxx/yyy
-
-setenv subgrr $GRRM/GRRM23.out
+set fn_run = "$1"
+setenv GRRMroot /home/local/GRRM23
+setenv PATH "${GRRMroot}:${PATH}"
+setenv subgrr GRRM.out
 setenv subgau g16
 setenv subchk formchk
 setenv subuchk unfchk
 setenv GAUSS_SCRDIR /scr/
 
-$GRRM/GRRMp $fn_run -p1 -s172800
+GRRMp $fn_run -p1 -s172800
 ```
 
-The variable `GRRM` sets the location where GRRM23p and GRRM23.out are installed in your computer. For further instructions on how to run GRRM jobs, see [AFIR-web](https://afir.sci.hokudai.ac.jp).
+The variable `GRRMroot` sets the location where GRRM23p and GRRM23.out are installed in your computer. For further instructions on how to run GRRM jobs, see [AFIR-web](https://afir.sci.hokudai.ac.jp).
 
 ## Step 1. Prepare input files
 The following files are required. You can find elample files in the `Example` directrory.  
