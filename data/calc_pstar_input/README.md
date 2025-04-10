@@ -1,2 +1,1 @@
-These files are input examples for the VLAO calculation to obtain $p^*$ values. The results presented in the original paper can be reproduced by executing the VLAO calulation with these input files and z_function.py.
-
+These files are input examples for the VLAO calculation to obtain $p^*$ values. The results presented in the original paper (Figures 7–12) can be reproduced by running the VLAO calculation with these input files and `z_function.py`.
