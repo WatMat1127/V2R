@@ -48,7 +48,7 @@ Each ligand section can include two or more `ovoid_LJpot` statements.
 
 ### GRRM_job.param_tag
 An input file for the `VL_main.py` which specifies parameters to calculate gradients and Hessians.  
-The format is essentially same as that for _GRRM_job_.param. The parameters for differentiation should be specified as "@@_p<sub>j</sub>_<sup>label</sup>@@" instead of corresponding initial values.  
+The format is essentially same as that for _GRRM_job_.param. The parameters for differentiation should be specified as "@@_p<sub>j</sub>_<sup>label</sup>@@" instead of corresponding values.  
 
 ## Step 2. Run GRRM 
 
