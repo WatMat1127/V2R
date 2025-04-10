@@ -89,7 +89,7 @@ The `grad_list` argument is a list of `numpy.ndarray`, where the *j*th component
 ## Step 3. Run calculation
 The calculation can be executed with the following command: `python main.py input run`.  
 As the optimization usually takes some time, it is recommended to run the calculation background with the following command:  
-`nohup python main.py input run > result.log &`.  
+`nohup python main.py input run >& result.log &`.  
 
 Immediately, _GRRM_job_i_\_step0.com and _GRRM_job_i_\_step0.param ($i = 1, \dotsc, n$) will be generated and corresponding GRRM jobs will be executed. After several steps, a file named analysis.txt will appear, summarizing the results of the parameter optimization.  
 The `f_val_log` shows the objective function value at each iteration. The values with and without the barrier function will be reported.  
